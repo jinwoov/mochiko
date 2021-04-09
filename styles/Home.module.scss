@@ -1,0 +1,33 @@
+.button {
+    padding: 5%;
+    font-size: 3rem;
+    border-radius: 8px;
+    background-color: aqua;
+}
+
+.header {
+    text-align: center;
+    .h1a {
+        font-size: 4rem;
+        margin: 2%;
+        &:hover{
+            opacity: .6;
+        }
+    }
+    .ahref {
+        margin: 0 2%;
+        &:hover{
+            opacity: .6;
+        }
+    }
+    .nav {
+        margin-top: 1%;
+    }
+}
+
+.maindiv{
+    text-align: center;
+    .img{
+        margin-top: 5%;
+    }
+}

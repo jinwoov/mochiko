@@ -1,0 +1,29 @@
+name: CI/CD
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  push:
+    branches:
+    - main
+    - master
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on Ubuntu 16.04
+    runs-on: ubuntu-16.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
+        env:
+          HEROKU_API_KEY: ${{ secret.HEROKU_API_KEY }}
+          APP_NAME: ${{ 'mochiko' }}
+        run: |
+          docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+          heroku container:push web -a $APP_NAME
+          heroku container:release web -a $APP_NAME
