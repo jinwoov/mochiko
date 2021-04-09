@@ -34,4 +34,4 @@ USER nextjs
 # TODO: uncomment this port if its local development
 # EXPOSE 3000
 
-CMD ["npx", "next", "start", "-p", "process.env.PORT"]
+CMD ["npm", "run", "start"]
