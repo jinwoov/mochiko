@@ -11,11 +11,6 @@ function Mochi() {
                         src="/assets/gochi.jpg" 
                         alt="mochi's picture"
                     />
-                    {/* <img 
-                        className={styles.img} 
-                        src="/assets/mochi-seal.png" 
-                        alt="mochi's picture"
-                    /> */}
                 </div>
             </>
     );  

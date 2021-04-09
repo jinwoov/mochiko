@@ -5,13 +5,18 @@ function Mochi() {
     return (
             <>
             < Header />
-                <div className={styles.maindiv}>
+                {/* <div className={styles.maindiv}>
                     <img 
                         className={styles.img} 
                         src="/assets/rochi.jpg" 
                         alt="mochi's picture"
                     />
-                </div>
+                </div> */}
+                <img 
+                        className={styles.img} 
+                        src="/assets/mochi-seal.png" 
+                        alt="mochi's picture"
+                    />
             </>
     );  
 }
