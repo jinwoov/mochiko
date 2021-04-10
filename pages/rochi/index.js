@@ -1,5 +1,7 @@
 import styles from "../../styles/Home.module.scss";
-import Header from '../../components/header/header'
+import Header from '../../components/header/header.component'
+import Footer from "../../components/footer/footer.component";
+
 function Mochi() {
 
     return (
@@ -17,7 +19,7 @@ function Mochi() {
                         alt="mochi's picture"
                     />
                 </div>
-
+                <Footer />
             </>
     );  
 }

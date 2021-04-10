@@ -1,9 +1,11 @@
 import styles from '../styles/Home.module.scss'
-import Header from '../components/header/header'
+import Header from '../components/header/header.component'
+import Footer from '../components/footer/footer.component'
 
 export default function Home() {
   return (
     <>
+
       < Header />
             <div className={styles.maindiv}>
                   <img 
@@ -12,6 +14,8 @@ export default function Home() {
                       alt="mochi's picture"
                   />
               </div>
+        <Footer />
+      
     </>
   )
 }
