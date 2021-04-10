@@ -30,7 +30,9 @@
     margin-bottom: 8%;
     margin-top: 8%;
     height: 95vh;
-
+    .img {
+        box-shadow: 5px 5px 3px rgb(0 0 0 / 37%);
+    }
 }
 
 @media only screen and (max-width: 600px) {
