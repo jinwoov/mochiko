@@ -4,7 +4,7 @@ import Footer from "../../components/footer/footer.component";
 
 function Mochi() {
 
-    let changePic = true;
+    let changePic = false;
     return (
             <>
             < Header />
