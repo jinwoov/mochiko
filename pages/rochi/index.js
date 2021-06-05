@@ -3,7 +3,8 @@ import Header from '../../components/header/header.component'
 import Footer from "../../components/footer/footer.component";
 
 function Mochi() {
-    let changePic = false; // Boolean that will wage, which pic will be showing to the public
+    // Boolean that will wage, which pic will be showing to the public
+    let changePic = true; //TODO: change this if you want different doggo
 
     return (
             <>
@@ -11,12 +12,12 @@ function Mochi() {
                 <div className={styles.maindiv}>
                     { changePic ? ( <img 
                         className={styles.img} 
-                        src="/assets/rochi2.jpg" // More rascal pic
+                        src="/assets/rochi2.jpg" // pic 2
                         alt="mochi's picture"
                     /> ) : ( 
                 <img 
                         className={styles.img} 
-                        src="/assets/rochi1.png" // Less rascal pic
+                        src="/assets/rochi1.png" // pic 1
                         alt="mochi's picture"
                     /> )}
                 </div>
