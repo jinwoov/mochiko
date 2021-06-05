@@ -11,19 +11,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  mochi:
-   runs-on: ubuntu-16.04
-   steps:
-     - name: ascii art
-       run: |
-        echo -e "
-          __  __            _     _ _         
-         |  \/  |          | |   (_) |        
-         | \  / | ___   ___| |__  _| | _____  
-         | |\/| |/ _ \ / __| '_ \| | |/ / _ \ 
-         | |  | | (_) | (__| | | | |   < (_) |
-         |_|  |_|\___/ \___|_| |_|_|_|\_\___/ 
-                                    "
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on Ubuntu 16.04
@@ -31,6 +19,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: ascii art
+        run: |
+          echo -e "
+            __  __            _     _ _         
+          |  \/  |          | |   (_) |        
+          | \  / | ___   ___| |__  _| | _____  
+          | |\/| |/ _ \ / __| '_ \| | |/ / _ \ 
+          | |  | | (_) | (__| | | | |   < (_) |
+          |_|  |_|\___/ \___|_| |_|_|_|\_\___/ 
+                                      "
+
       - uses: actions/checkout@v2
 
       - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
