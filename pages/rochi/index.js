@@ -11,12 +11,12 @@ function Mochi() {
                 <div className={styles.maindiv}>
                     { changePic ? ( <img 
                         className={styles.img} 
-                        src="/assets/rochi.jpg" 
+                        src="/assets/rochi2.jpg" 
                         alt="mochi's picture"
                     /> ) : ( 
                 <img 
                         className={styles.img} 
-                        src="/assets/mochi-seal.png" 
+                        src="/assets/rochi1.png" 
                         alt="mochi's picture"
                     /> )}
                 </div>
