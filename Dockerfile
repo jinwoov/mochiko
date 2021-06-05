@@ -14,4 +14,4 @@ RUN npm install -y
 RUN npm run build
 
 # run the npm
-ENTRYPOINT ["npm", "run", "start"]
+CMD ["npm", "run", "start"]
