@@ -11,8 +11,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "buildNpush"
+  CICD:
     # The type of runner that the job will run on Ubuntu 16.04
     runs-on: ubuntu-16.04
 
@@ -29,13 +29,13 @@ jobs:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           APP_NAME: ${{ 'mochiko' }}
 
-        #Step that will be run after build is done.
+        #logging into heroku registry and push the image that was built, then releasing it to publish it to DNS.
         run: |
           docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
           heroku container:push web -a $APP_NAME
           heroku container:release web -a $APP_NAME
   
-      # pinging the website
+      # Mock integration test that will ping the website
       - name: RUNNING INTEGRATION TEST
         # You may pin to the exact commit or the version.
         # uses: Leocardoso94/is-my-site-up@dd9b46848d4e3e871dfb20cf98de8fa6caf35324
