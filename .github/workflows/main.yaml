@@ -19,7 +19,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: ascii art
+      - name: RUNNING ASCII ART!
         run: |
           echo -e "
             __  __            _     _ _         
@@ -32,8 +32,9 @@ jobs:
           sleep 2s
 
       - uses: actions/checkout@v2
+        name: CHECK OUT THE CODE TO THE VM
 
-      - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
+      - name: BUILD, PUSH and DEPLOY to HEROKU #set the whatever name you want to this step
         env:
           # this environment variable can be saved in github repository -> settings -> secrets -> new repository secret 
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
@@ -45,7 +46,7 @@ jobs:
           heroku container:push web -a $APP_NAME
           heroku container:release web -a $APP_NAME
   
-      - name: Integration test
+      - name: RUNNING INTEGRATION TEST
         # You may pin to the exact commit or the version.
         # uses: Leocardoso94/is-my-site-up@dd9b46848d4e3e871dfb20cf98de8fa6caf35324
         uses: Leocardoso94/is-my-site-up@v1.2

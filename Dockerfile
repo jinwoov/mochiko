@@ -1,6 +1,8 @@
-
+# The node base image 
 FROM node:alpine
-RUN apk add --no-cache libc6-compat
+
+# installing dependency
+# RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY . .
 RUN npm install -y
