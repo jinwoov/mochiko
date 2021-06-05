@@ -1,15 +1,16 @@
 # # using the node alpine image to download necessary dependencies
 # FROM node:alpine AS dependency
 
-# RUN apk add --no-cache libc6-compat
 # WORKDIR /app
 # COPY ./package.json ./
 # RUN npm install -y
 
 # using this image as a builder to build the application
-FROM node:alpine AS builder
+FROM node:alpine
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY . .
+RUN npm install -y
 RUN npm run build
 
 # # using this image to run the application to the client
