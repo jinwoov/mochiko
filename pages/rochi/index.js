@@ -4,7 +4,7 @@ import Footer from "../../components/footer/footer.component";
 
 function Mochi() {
     // Boolean that will wage, which pic will be showing to the public
-    let changePic = true; //TODO: change this if you want different doggo
+    let changePic = false; //TODO: change this if you want different doggo
 
     return (
             <>
