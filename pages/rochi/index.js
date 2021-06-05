@@ -3,7 +3,7 @@ import Header from '../../components/header/header.component'
 import Footer from "../../components/footer/footer.component";
 
 function Mochi() {
-    let changePic = true; // Boolean that will wage, which pic will be showing to the public
+    let changePic = false; // Boolean that will wage, which pic will be showing to the public
 
     return (
             <>
