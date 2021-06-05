@@ -13,25 +13,25 @@ COPY . .
 COPY --from=dependency /app/node_modules ./node_modules
 RUN npm run build
 
-# using this image to run the application to the client
-FROM node:alpine AS runner
+# # using this image to run the application to the client
+# FROM node:alpine AS runner
 
-WORKDIR /app
+# WORKDIR /app
 
-ENV NODE_ENV production
+# ENV NODE_ENV production
 
-# copying all the necessary modules and files to be ran in the app.
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+# # copying all the necessary modules and files to be ran in the app.
+# COPY --from=builder /app/public ./public
+# COPY --from=builder /app/.next ./.next
+# COPY --from=builder /app/node_modules ./node_modules
+# COPY --from=builder /app/package.json ./package.json
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-RUN chown -R nextjs:nodejs /app/.next
-USER nextjs
+# RUN addgroup -g 1001 -S nodejs
+# RUN adduser -S nextjs -u 1001
+# RUN chown -R nextjs:nodejs /app/.next
+# USER nextjs
 
-# TODO: uncomment this port if its local development
-# EXPOSE 3000
+# # TODO: uncomment this port if its local development
+# # EXPOSE 3000
 
 CMD ["npm", "run", "start"]
